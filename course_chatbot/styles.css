@@ -1,0 +1,54 @@
+/* Course Chatbot Styles */
+
+.course-chatbot-button {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+    padding: 12px 20px;
+    margin: 15px 0;
+    border-left: 5px solid #2196f3;
+    border-radius: 4px;
+    font-weight: 500;
+    color: #1976d2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    left: 20px;
+}
+
+.course-chatbot-button:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+}
+
+.chat-message {
+    margin: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 80%;
+}
+.user-message {
+    background: #007bff;
+    color: white;
+    margin-left: auto;
+    margin-right: 16px;
+}
+.bot-message {
+    background: #e9ecef;
+    color: #333;
+}
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.loading {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
