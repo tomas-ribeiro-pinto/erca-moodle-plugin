@@ -46,7 +46,8 @@ class output {
             $templatecontext = [
                 'course_id' => $COURSE->id,
                 'user_email' => $USER->email,
-                'chatbot_id' => 1 // TODO: Hardcoded for now, can be made dynamic later
+                'chatbot_id' => 1, // TODO: Hardcoded for now, can be made dynamic later
+                'user_name' => $USER->firstname . ' ' . $USER->lastname
             ];
 
             $hook->add_html($OUTPUT->render_from_template('local_course_chatbot/chatbot_modal', $templatecontext));
