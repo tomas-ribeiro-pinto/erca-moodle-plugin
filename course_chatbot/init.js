@@ -29,7 +29,8 @@ async function loadChatHistory() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                user_email: user_email
+                user_email: user_email,
+                user_name: user_name
             })
         });
         const data = await response.json();
@@ -159,6 +160,7 @@ async function streamResponse(userMessage) {
                 },
                 body: JSON.stringify({
                     user_email: user_email,
+                    user_name: user_name,
                     prompt: userMessage
                 })
             });

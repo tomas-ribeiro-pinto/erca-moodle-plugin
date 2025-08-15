@@ -205,7 +205,7 @@ function handle_api_request($action, $chatbot_id) {
         switch ($action) {
             case 'history':
                 // Get chat history
-                $url = $api_host . "/chatbot/{$chatbot_id}/history";
+                $url = $api_host . "/api/chatbot/{$chatbot_id}/history";
                 $data = json_encode(['user_email' => $user_email, 'user_name' => $user_name]);
                 $response = make_api_request($url, 'POST', $data);
                 echo $response;
@@ -226,7 +226,7 @@ function handle_api_request($action, $chatbot_id) {
                 header('Connection: keep-alive');
                 header('X-Accel-Buffering: no'); // Disable nginx buffering
 
-                $url = $api_host . "/chatbot/{$chatbot_id}/prompt";
+                $url = $api_host . "/api/chatbot/{$chatbot_id}/prompt";
                 $data = json_encode(['prompt' => $prompt, 'user_email' => $user_email, 'user_name' => $user_name]);
                 make_sse_api_request($url, 'POST', $data);
                 break;
