@@ -50,7 +50,7 @@ async function loadChatHistory() {
 function addMessageToChat(content, role) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `chat-message ${role === 'user' ? 'user-message' : 'bot-message'}`;
-    messageDiv.textContent = content;
+    messageDiv.innerHTML = content;
     chatContainer.appendChild(messageDiv);
     chatContainer.scrollTop = chatContainer.scrollHeight;
     return messageDiv;
@@ -116,7 +116,7 @@ function startManualTypingAnimation(container) {
 function updateStreamingMessage(content) {
     const streamingDiv = document.getElementById('streaming-message');
     if (streamingDiv) {
-        streamingDiv.textContent = content;
+        streamingDiv.innerHTML = content;
     }
 }
 
